@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Push History to DB for recommendation.</title>
+
+    <script src="popup.js"></script>
+
+    <style>
+      html {
+        min-height: 100px;
+        min-width: 250px;
+
+        text-align: center;
+      }
+
+      #download-btn {
+        width: 100%;
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      #download-btn:hover {
+        background-color: #75ac77;
+      }
+
+      #download-btn:active {
+        background-color: #4caf50;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Push History to DB for recommendation.</h1>
+    <input
+      id="input-data"
+      type="text"
+      placeholder="Enter wallet address"
+      required
+    />
+    <button id="download-btn">Push History</button>
+  </body>
+</html>

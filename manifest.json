@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "version": "0.0.1",
+    "name": "Google Chrome History Exporter",
+    "author": "Mensur Owary",
+    "description": "Google Chrome extension that allows you to export browsing history as JSON",
+    "action": {
+        "default_title": "Get history!",
+        "default_popup": "popup.html"
+    },
+    "permissions": ["history", "tabs"]
+}
