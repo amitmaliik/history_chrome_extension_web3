@@ -40,16 +40,38 @@ function onClickDownload() {
         maxResults: 10000,
       },
       (results) =>
-        (historyData = results.map(({ title, url }) => ({
-          data1: title,
-          data2: url,
-        })))
+        // (window.amit = results)
+        // console.log(results)
+
+        // (historyData = results.map((item) =>
+        //   {
+        //   title: item.title,
+        //   url: item.url,
+        //   }
+
+        // console.log(item)
+        // ))
+        fetchData({
+          historyData: results.map((item) => ({
+            title: item.title,
+            url: item.url,
+          })),
+          address: inputValue,
+        })
+      // historyData=results
+      // (historyData = results.map(({ title, url }) => ({
+      // data1: title,
+      // data2: url,
+      // })))
     );
 
-    console.log(historyData, "dsnbdnd");
-    fetchData({ historyData: historyData, address: inputValue });
-    const body = { id: "", data: "" };
-    fetchData(body);
+    console.log(historyData, "amit");
+    // fetchData({
+    //   historyData: historyData,
+    //   address: inputValue,
+    // });
+    // const body = { id: "", data: "" };
+    // fetchData(body);
     getDownloadBtn().innerText = "Push history to DB for recommendation.";
   } else {
     alert("Please enter a address");
