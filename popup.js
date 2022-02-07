@@ -4,8 +4,10 @@ function getDownloadBtn() {
   return document.getElementById("download-btn");
 }
 
-function fetchData(body) {
-  fetch("http://127.0.0.1:5000/push_data", {
+// http://52.14.22.215/
+//127.0.0.1:5000/push_data
+http: function fetchData(body) {
+  fetch("http://52.14.22.215/push_data", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -53,8 +55,11 @@ function onClickDownload() {
         // ))
         fetchData({
           historyData: results.map((item) => ({
+            id: item.id,
+            visitCount: item.visitCount,
             title: item.title,
             url: item.url,
+            category: "",
           })),
           address: inputValue,
         })
