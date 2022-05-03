@@ -1,51 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Push History to DB for recommendation.</title>
+		<head>
+				<meta charset="UTF-8" />
+				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<link rel="stylesheet" href="./bootstrap.min.css">
+				<script src="./jquery.slim.min.js"></script>
+				<script src="./popper.min.js"></script>
+				<script src="./bootstrap.bundle.min.js"></script>
+				<title>Push History to DB for recommendation.</title>
+				<script src="popup.js"></script>
+				<style>
+						html {
+								min-height: 200px;
+								min-width: 350px;
+								text-align: center;
+						}
 
-    <script src="popup.js"></script>
+						#download-btn {
+								width: 100%;
+								background-color: #4caf50;
+								border: none;
+								color: white;
+								padding: 15px 32px;
+								text-align: center;
+								text-decoration: none;
+								display: inline-block;
+								font-size: 16px;
+								font-weight: bold;
+						}
 
-    <style>
-      html {
-        min-height: 100px;
-        min-width: 250px;
+						#download-btn:hover {
+								background-color: #75ac77;
+						}
 
-        text-align: center;
-      }
-
-      #download-btn {
-        width: 100%;
-        background-color: #4caf50;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        font-weight: bold;
-      }
-
-      #download-btn:hover {
-        background-color: #75ac77;
-      }
-
-      #download-btn:active {
-        background-color: #4caf50;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Push History to DB for recommendation.</h1>
-    <input
-      id="input-data"
-      type="text"
-      placeholder="Enter wallet address"
-      required
-    />
-    <button id="download-btn">Push History</button>
-  </body>
+						#download-btn:active {
+								background-color: #4caf50;
+						}
+				</style>
+		</head>
+		<body>
+				<div class="jumbotron" align="center">
+						<!-- <h3>Push History to DB for recommendation.</h3> -->
+						<h3>Google Chrome History Exporter.</h3>
+				</div>
+				<div class="container">
+						<div class="row">
+								<div class="col-sm-12">
+										<div class="form-group">
+												<label for="input-data">Enter Wallet Address:</label>
+												<input type="text" class="form-control" id="input-data" required>
+												<br>
+												<label for="input-data">Please select history for sharing:</label>
+												<br>
+												<div class="form-check">
+														<label class="form-check-label">
+																<input type="checkbox" class="form-check-input" value="youtube" id="youtube">Youtube
+														</label>
+												</div>
+												<div class="form-check">
+														<label class="form-check-label">
+																<input type="checkbox" class="form-check-input" value="twitter" id="twitter">Twitter
+														</label>
+												</div>
+												<div class="form-check">
+														<label class="form-check-label">
+																<input type="checkbox" class="form-check-input" value="spotify" id="spotify">Spotify
+														</label>
+												</div>
+												<div class="form-check">
+														<label class="form-check-label">
+																<input type="checkbox" class="form-check-input" value="quora" id="quora">Quora
+														</label>
+												</div>
+												<div class="form-check">
+														<label class="form-check-label">
+																<input type="checkbox" class="form-check-input" value="medium" id="medium">Medium
+														</label>
+												</div>
+												<div class="form-check">
+														<label class="form-check-label">
+																<input type="checkbox" class="form-check-input" value="google-news" id="google-news">Google News
+														</label>
+												</div>
+												<div class="form-check">
+														<label class="form-check-label">
+																<input type="checkbox" class="form-check-input" value="all" id="all">All
+														</label>
+												</div>
+												<br>
+												<button type="button" id="download-btn" class="btn btn-primary">Push History</button>
+										</div>
+								</div>
+						</div>
+				</div>
+		</body>
 </html>
